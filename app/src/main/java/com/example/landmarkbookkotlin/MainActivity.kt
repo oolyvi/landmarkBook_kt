@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
 
         landmarkList = ArrayList<Landmark>()
 
-        //Data
         val pisa = Landmark("Pisa", "Italy", R.drawable.pisa)
         val eiffel = Landmark("Eiffel", "France", R.drawable.eiffel)
         val londonBridge = Landmark("London Bridge", "UK", R.drawable.londonbridge)
@@ -31,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         landmarkList.add(maidenTower)
 
 
-        //RecyclerView initialize
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         val landmarkAdapter = LandmarkAdapter(landmarkList)
         binding.recyclerView.adapter = landmarkAdapter
