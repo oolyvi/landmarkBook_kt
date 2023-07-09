@@ -15,9 +15,7 @@ class DetailsActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        //tiklandiqda detailsActivity'de yazidqlarinin gosterilmesi
         val intent = intent
-        //val selectedLandmark = intent.getSerializableExtra("landmark") as Landmark
 
         val selectedLandmark = MySingleton.chosenLandmark
 
