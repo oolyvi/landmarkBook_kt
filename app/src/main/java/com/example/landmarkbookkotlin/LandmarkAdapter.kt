@@ -23,15 +23,11 @@ class LandmarkAdapter(val landmarkList : ArrayList<Landmark>) : RecyclerView.Ada
     }
 
     override fun onBindViewHolder(holder: LandmarkHolder, position: Int) {
-        //recyclerView hissesinde ancaq ad gornecek deye bele .name yaziriq
         holder.binding.recyclerViewTextView.text = landmarkList.get(position).name
 
-        //tiklanma
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, DetailsActivity::class.java)
 
-            //secilen landmarki diger terefe yollamaq
-            //intent.putExtra("landmark", landmarkList.get(position))
             MySingleton.chosenLandmark = landmarkList.get(position)
             holder.itemView.context.startActivity(intent)
         }
